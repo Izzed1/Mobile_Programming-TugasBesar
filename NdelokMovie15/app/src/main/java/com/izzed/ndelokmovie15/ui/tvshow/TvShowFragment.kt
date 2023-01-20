@@ -22,11 +22,12 @@ class TvShowFragment : Fragment() {
 
     private val viewModel: TvShowViewModel by viewModel()
 
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-
+        // Inflate the layout for this fragment
         if (_binding == null){
             _binding = FragmentTvShowBinding.inflate(inflater, container, false)
             binding = _binding as FragmentTvShowBinding
@@ -37,9 +38,9 @@ class TvShowFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        adapter = TvShowAdapter().apply{
-            onClick{
-                Intent(activity, DetailActivity::class.java).also{ intent ->
+        adapter = TvShowAdapter().apply {
+            onClick {
+                Intent(activity, DetailActivity::class.java).also { intent ->
                     intent.putExtra(DetailActivity.EXTRA_TYPE, DetailActivity.data[1])
                     intent.putExtra(DetailActivity.EXTRA_DATA, it)
                     startActivity(intent)

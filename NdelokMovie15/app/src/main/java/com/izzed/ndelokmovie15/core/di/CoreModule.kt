@@ -1,6 +1,6 @@
 package com.izzed.ndelokmovie15.core.di
 
-import androidx.viewbinding.BuildConfig
+import com.izzed.ndelokmovie15.BuildConfig
 import com.izzed.ndelokmovie15.core.data.remote.MovieRemoteDataSource
 import com.izzed.ndelokmovie15.core.data.remote.TvShowRemoteDataSource
 import com.izzed.ndelokmovie15.core.data.remote.network.ApiService
@@ -43,20 +43,9 @@ val networkModule = module {
 
 }
 
-val repositoryModule1 = module {
+val repositoryModule = module {
     single { MovieRemoteDataSource(get()) }
     single<IMovieRepository> { MovieRepository(get()) }
-
-
-
-}
-
-val repositoryModule2 = module {
-
     single { TvShowRemoteDataSource(get()) }
     single<ITvShowRepository> { TvShowRepository(get()) }
-
-
 }
-
-

@@ -10,7 +10,15 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+
+        maven {
+            url "https://jitpack.io"
+        }
+
+        maven {
+            url "https://jcenter.bintray.com"
+        }
     }
 }
-rootProject.name = "Ndelok Movie 1.5"
+rootProject.name = "NdelokMovie15"
 include ':app'

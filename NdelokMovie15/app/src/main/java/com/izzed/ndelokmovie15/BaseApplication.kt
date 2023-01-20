@@ -2,8 +2,7 @@ package com.izzed.ndelokmovie15
 
 import android.app.Application
 import com.izzed.ndelokmovie15.core.di.networkModule
-import com.izzed.ndelokmovie15.core.di.repositoryModule1
-import com.izzed.ndelokmovie15.core.di.repositoryModule2
+import com.izzed.ndelokmovie15.core.di.repositoryModule
 import com.izzed.ndelokmovie15.di.useCaseModule
 import com.izzed.ndelokmovie15.di.viewModelModule
 import org.koin.android.ext.koin.androidContext
@@ -19,11 +18,9 @@ class BaseApplication: Application(){
             androidContext(this@BaseApplication)
             modules(
                 networkModule,
-                repositoryModule1,
-                repositoryModule2,
+                repositoryModule,
                 useCaseModule,
                 viewModelModule
-
             )
         }
     }

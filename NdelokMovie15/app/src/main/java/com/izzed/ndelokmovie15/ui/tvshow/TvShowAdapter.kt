@@ -16,16 +16,15 @@ class TvShowAdapter: RecyclerView.Adapter<TvShowAdapter.ViewHolder>() {
     private var listener: ((TvShow) -> Unit)? = null
 
     var tvshow = mutableListOf<TvShow>()
-        set(value) {
-            val callback = DivTvShowCallback(field, value)
-            val result = DiffUtil.calculateDiff(callback)
-            field.clear()
-            field.addAll(value)
-            result.dispatchUpdatesTo(this)
-        }
+    set(value) {
+        val callback = DivTvShowCallback(field, value)
+        val result = DiffUtil.calculateDiff(callback)
+        field.clear()
+        field.addAll(value)
+        result.dispatchUpdatesTo(this)
+    }
 
-    inner class ViewHolder(private val binding: ItemMovieOrTvshowBinding):
-        RecyclerView.ViewHolder(binding.root) {
+    inner class ViewHolder(private val binding: ItemMovieOrTvshowBinding): RecyclerView.ViewHolder(binding.root) {
         fun bind(tvShow: TvShow){
             binding.apply {
                 tvShow.poster?.let {

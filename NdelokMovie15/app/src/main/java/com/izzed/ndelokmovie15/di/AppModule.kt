@@ -12,10 +12,10 @@ import org.koin.dsl.module
 val useCaseModule = module {
     factory<MovieUseCase> { MovieInteractor(get()) }
     factory<TvShowUseCase> { TvShowInteractor(get()) }
+
 }
 
-val viewModelModule= module {
+val viewModelModule = module {
     viewModel { MovieViewModel(get()) }
-    viewModel { TvShowViewModel(get())}
+    viewModel { TvShowViewModel(get()) }
 }
-

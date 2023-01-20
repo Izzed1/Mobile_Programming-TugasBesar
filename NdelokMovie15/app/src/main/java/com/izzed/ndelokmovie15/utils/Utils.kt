@@ -7,7 +7,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.izzed.ndelokmovie15.R
 
-const val API_KEY = "907d0a4b623df45f0ae9cea46720323d"
+const val API_KEY = "3f439738eb048143ce0cdfba822268a6"
 const val BASE_URL = "https://api.themoviedb.org/3/"
 
 const val BASE_URL_API_IMAGE = "https://image.tmdb.org/t/p/"

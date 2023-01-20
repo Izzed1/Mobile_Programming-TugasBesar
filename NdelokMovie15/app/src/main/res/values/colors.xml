@@ -12,6 +12,7 @@
     <color name="bottomNav">#FF0C0C0C</color>
     <color name="content">#FF202221</color>
     <color name="yellow">#FFF2BF40</color>
+    <color name="yellow_2">#FFFFDF2B</color>
     <color name="grey">#FF7E7E7E</color>
 
 </resources>

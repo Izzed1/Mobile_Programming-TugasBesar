@@ -33,8 +33,8 @@ class DetailActivity : AppCompatActivity() {
 
     private fun getDetailTvShow(data: TvShow) {
         binding.apply {
-            imgDetailPoster.loadImageTvShow("$BASE_URL_API_IMAGE$POSTER_SIZE_W185${data.imgPreview}")
-            imgDetailHightlight.loadImageTvShow("$BASE_URL_API_IMAGE$POSTER_SIZE_W780${data.poster}")
+            imgDetailPoster.loadImageTvShow("$BASE_URL_API_IMAGE$POSTER_SIZE_W185${data.poster}")
+            imgDetailHightlight.loadImageTvShow("$BASE_URL_API_IMAGE$POSTER_SIZE_W780${data.imgPreview}")
             tvTitle.text = data.name
             tvDesc.text = if (data.desc.isNullOrEmpty()) "No Description" else data.desc
             tvReleaseDate.text = data.releaseDate
